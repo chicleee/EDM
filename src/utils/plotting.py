@@ -29,6 +29,7 @@ def make_matching_figure(
     text=[],
     dpi=75,
     path=None,
+    linewidth=0.2,
 ):
     # draw image pair
     assert (
@@ -61,7 +62,7 @@ def make_matching_figure(
                 (fkpts0[i, 1], fkpts1[i, 1]),
                 transform=fig.transFigure,
                 c=color[i],
-                linewidth=1,
+                linewidth=linewidth,
             )
             for i in range(len(mkpts0))
         ]
